@@ -14,7 +14,23 @@ window.fetch(url)
 .then((respuesta) => respuesta.json())
 //JSON --> Data -> Renderizar información en el navegador
 .then((responseJSON) =>{
+    const todosLosItems = [];
+
     responseJSON.data.forEach(item => {
-        console.log(item.name);
+        //crear imagen
+        const image = document.createElement('img')
+
+        //crear titulo
+        const title = document.createElement('h2')
+
+        //crear precio
+        const price = document.createElement('div')
+
+        //creamos un contenedor de los elementos
+        const container =  document.createElement('div');
+        container.append(image, title, price);
+
+        todosLosItems.push(container);
     });
+    document.body.append(...todosLosItems);
 });
