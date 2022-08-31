@@ -13,6 +13,8 @@ window.fetch(url)
 // procesar la respuesta y convertirla en JSON
 .then((respuesta) => respuesta.json())
 //JSON --> Data -> Renderizar información en el navegador
-.then((data) =>{
-    console.log(data)
+.then((responseJSON) =>{
+    responseJSON.data.forEach(item => {
+        console.log(item.name);
+    });
 });
