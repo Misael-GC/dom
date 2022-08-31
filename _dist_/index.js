@@ -6,6 +6,14 @@
 console.log('Happy hacking :)')
 const baseUrl = 'https://platzi-avo.vercel.app';
 const appNode = document.querySelector('#app');
+
+appNode.addEventListener('click', (event)=>{
+    if(event.target.nodeName === 'H2'){
+        window.alert('hola, modal');
+    }
+});
+
+
 const formatPrice = (price) =>{
     const newPrice = new window.Intl.NumberFormat('es',{
         style:'currency',
@@ -56,3 +64,5 @@ window.fetch(`${baseUrl}/api/avo`)
     });
     appNode.append(...todosLosItems);
 });
+
+
