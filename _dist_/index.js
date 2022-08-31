@@ -7,9 +7,9 @@ console.log('Happy hacking :)')
 const baseUrl = 'https://platzi-avo.vercel.app';
 const appNode = document.querySelector('#app');
 const formatPrice = (price) =>{
-    const newPrice = new window.Intl.NumberFormat('en-En',{
+    const newPrice = new window.Intl.NumberFormat('es',{
         style:'currency',
-        currency:'GBP'
+        currency:'USD'
     }).format(price)
 
     return newPrice;
