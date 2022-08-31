@@ -5,6 +5,6 @@ module.exports = {
     src: '/_dist_',
   },
   buildOptions: {
-    baseUrl: 'https:// robmvsk.github.io/workshop-1-fetch',
+    baseUrl: 'https://misael-gc.github.io/dom',
   },
 }
